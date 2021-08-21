@@ -14,8 +14,8 @@
     line-height: 0.75rem;
   }
   .big-text {
-    font-size: clamp(2rem, 8vw, 4rem);
-    line-height: clamp(2rem, 8vw, 4rem);
+    font-size: clamp(2rem, 8vw, 5rem);
+    line-height: clamp(2rem, 8vw, 5rem);
   }
   .column-text {
     writing-mode: vertical-rl;
@@ -31,6 +31,9 @@
   }
   .z-2 {
     z-index: 2;
+  }
+  .max-w-screen-3xl {
+    max-width: 1792px;
   }
 }
 
@@ -51,7 +54,7 @@
 
 @layer components {
   .btn {
-    @apply rounded text-purple-400 font-mono text-2xs transition duration-300 ease-in-out;
+    @apply rounded text-purple-400 font-mono text-xs transition duration-300 ease-in-out;
     border: 1px solid;
     &:hover {
       background: rgba(255, 255, 255, 0.05);

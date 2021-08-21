@@ -30,9 +30,9 @@
   <ion-icon name="heart" />
 </SideInfo>
 <SideInfo side="right">
-  <a class="text-2xs font-mono column-text" href="mailto:jackbow@umich.edu">jackbow@umich.edu</a>
+  <a class="text-xs font-mono column-text" href="mailto:jackbow@umich.edu">jackbow@umich.edu</a>
 </SideInfo>
-<main class="h-full mx-auto max-w-screen-2xl">
+<main class="mx-auto h-full max-w-screen-3xl">
   <Home />
   <About />
   <Experience />

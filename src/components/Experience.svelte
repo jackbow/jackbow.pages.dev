@@ -9,13 +9,13 @@
 </script>
 
 <div id="experience" class="mx-auto max-w-xl py-16 md:py-20">
-  <h1 class="section-header">Where I've Worked</h1>
+  <h1 class="section-header mb-1">Where I've Worked</h1>
   <div class="sm:flex">
     <div class="flex overflow-y-auto w-max max-w-full flex-row sm:flex-col mb-6 mr-4 ">
       {#each jobs as job, index (index)}
         <p
           class:active={tab === index}
-          class="tab scrollreveal text-center sm:text-left text-2xs px-4 py-3 font-mono cursor-pointer transition-all duration-300 ease-in-out"
+          class="tab scrollreveal text-center sm:text-left text-xs px-4 py-3 font-mono cursor-pointer transition-all duration-300 ease-in-out"
           on:click={() => {
             setTab(index);
           }}
@@ -31,12 +31,12 @@
             <span>{job.title}</span>
             <a href={job.link}>@ {job.company}</a>
           </h3>
-          <p class="text-xs text-off-gray font-mono font-light mb-4 mt-1 scrollreveal">
+          <p class="text-sm text-off-gray font-mono font-light mb-4 mt-1 scrollreveal">
             {job.range}
           </p>
-          <ul class="text-off-gray text-sm">
+          <ul class="text-off-gray text-md">
             {#each job.bullets as bullet, index (index)}
-              <li class="text-xs mb-3 scrollreveal">{bullet}</li>
+              <li class="text-sm mb-3 scrollreveal">{bullet}</li>
             {/each}
           </ul>
         </div>

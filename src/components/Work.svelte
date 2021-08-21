@@ -3,7 +3,7 @@
   import work from '../../content/work.js';
 </script>
 
-<div id="work" class="mt-36 mx-auto max-w-screen-lg py-96 2xs:py-48 xs:py-28 sm:py-24 md:py-20 lg:py-14">
+<div id="work" class="mt-48 mx-auto max-w-screen-lg py-96 2xs:py-48 xs:py-28 sm:py-24 md:py-20 lg:py-14">
   <h1 class="section-header">Some Things I’ve Built</h1>
   {#each work as project, index (index)}
     <div class="project-container justify-items-end grid items-center gap-2 mb-10 mt-2">
@@ -13,11 +13,11 @@
         class:content-right={index % 2 === 0}
         class:content-left={index % 2 === 1}
       >
-        <p class="text-xl font-semibold scrollreveal">{project.title}</p>
-        <div class="z-2 content-desc relative scrollreveal rounded p-0 md:p-4 mt-4 text-off-gray text-xs md:shadow-xl">
+        <p class="text-2xl font-semibold scrollreveal">{project.title}</p>
+        <div class="z-2 content-desc relative scrollreveal rounded p-0 md:p-4 mt-4 text-off-gray text-sm md:shadow-xl">
           {project.description}
         </div>
-        <div class="project-tech scrollreveal mt-4 font-mono text-2xs text-off-gray">
+        <div class="project-tech scrollreveal mt-4 font-mono text-xs text-off-gray">
           {#each project.tech as tech}
             <p class="inline">{tech}</p>
           {/each}
@@ -25,12 +25,12 @@
         <div class="project-links scrollreveal mt-4">
           {#if project.github}
             <a href={project.github}>
-              <ion-icon class="text-off-gray text-2xl" name="logo-github" />
+              <ion-icon class="text-off-gray text-3xl" name="logo-github" />
             </a>
           {/if}
           {#if project.url}
             <a href={project.url}>
-              <ion-icon class="text-off-gray text-2xl" name="log-out-outline" />
+              <ion-icon class="text-off-gray text-3xl" name="log-out-outline" />
             </a>
           {/if}
         </div>

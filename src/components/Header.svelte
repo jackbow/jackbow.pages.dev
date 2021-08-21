@@ -46,7 +46,7 @@
   class:open={navMenuOpen}
 >
   {#each ['About', 'Experience', 'Work', 'Contact'] as section, index}
-    <div class="font-mono flex-col flex items-center text-sm">
+    <div class="font-mono flex-col flex items-center text-md">
       <p class="inline text-purple-400">0{index + 1}.</p>
       <a
         on:click={() => {
@@ -55,11 +55,11 @@
         href={`#${section.toLowerCase()}`}
         class="hover:text-purple-400 transition duration-300"
       >
-        <p class="inline text-off-gray text-md">{section}</p>
+        <p class="inline text-off-gray text-lg">{section}</p>
       </a>
     </div>
   {/each}
-  <a href={resumeUrl} class="btn text-xs px-8 py-4">Resume</a>
+  <a href={resumeUrl} class="btn text-sm px-8 py-4">Resume</a>
 </div>
 <div
   id="header"
@@ -80,14 +80,14 @@
           toggleNavMenu();
         }}
         name={navMenuOpen ? 'close-outline' : 'menu-outline'}
-        class="text-purple-400 text-4xl z-30 cursor-pointer right-0"
+        class="text-purple-400 text-5xl z-30 cursor-pointer right-0"
       />
     {/key}
   {:else}
     {#each ['About', 'Experience', 'Work', 'Contact'] as section, index}
       <a
         href={`#${section.toLowerCase()}`}
-        class="text-2xs font-mono py-2 hover:text-purple-400 transition duration-300"
+        class="text-xs font-mono py-2 hover:text-purple-400 transition duration-300"
       >
         <p class="inline text-purple-400">0{index + 1}.</p>
         <p class="inline text-off-gray ">{section}</p>
