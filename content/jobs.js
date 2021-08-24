@@ -6,10 +6,12 @@ export default [
     range: "March 2020 - Present",
     link: "https://www.mcity.umich.edu/",
     bullets: [
-      `Writing modern, performant, maintainable code for a diverse array of client and internal projects`,
-      `Working with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, Vue, Flask, Node, Cypress.io, and PostgreSQL`,
-      `Developed research tools for the world’s largest connected & autonomous vehicle test environment. Used by
-        Ford, GM, Toyota, Subaru, and BMW autonomous vehicle engineers.`,
+      `Developed research tools for the world’s largest connected & autonomous vehicle test environment in a small team.Used by Ford, GM, Toyota, Subaru, and BMW autonomous vehicle engineers among others.`,
+      `Created location based network visualization tool for connectivity, mapping, and searching of all facility devices.`,
+      `Added features, improved user interfaces, and triaged errors in existing applications.`,
+      `Implemented unit test and integration test suites hooked into CI / CD pipelines.`,
+      `On-boarded and trained a new-hire engineer.`,
+      `Worked with various technologies including Vue, Python, Docker, PostgreSQL, Redis, Cypress.js, Node.js, Flask, and WebSockets`,
     ],
   },
   {
