@@ -11,7 +11,6 @@ export default [
       `Added features, improved user interfaces, and triaged errors in existing applications.`,
       `Implemented unit test and integration test suites hooked into CI / CD pipelines.`,
       `On-boarded and trained a new-hire engineer.`,
-      `Worked with various technologies including Vue, Python, Docker, PostgreSQL, Redis, Cypress.js, Node.js, Flask, and WebSockets`,
     ],
   },
   {

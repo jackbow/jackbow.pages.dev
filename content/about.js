@@ -5,5 +5,5 @@ export default {
     `Shortly after graduating from the University of Michigan, I joined the engineering team at Mcity where I work on a wide variety of interesting and meaningful projects on a daily basis.`,
     `Here are a few technologies I've been working with recently:`,
   ],
-  bullets: ["Vue", "Svelte", "Flask", "CSS", "PostgreSQL", "Cypress.io"],
+  bullets: ["Vue", "Docker", "Python", "WebSockets", "PostgreSQL", "Cypress.io"],
 };
