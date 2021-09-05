@@ -9,16 +9,16 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.19",
-    "autoprefixer": "^10.3.2",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.21",
+    "autoprefixer": "^10.3.4",
     "postcss": "^8.3.6",
     "postcss-load-config": "^3.1.0",
-    "stylus": "^0.54.8",
-    "svelte": "^3.42.2",
-    "svelte-preprocess": "^4.7.4",
-    "tailwindcss": "^2.2.7",
-    "vite": "^2.5.0",
-    "husky": "^6.0.0"
+    "stylus": "^0.55.0",
+    "svelte": "^3.42.4",
+    "svelte-preprocess": "^4.9.0",
+    "tailwindcss": "^2.2.9",
+    "vite": "^2.5.3",
+    "husky": "^7.0.2"
   },
   "dependencies": {
     "scrollreveal": "^4.0.9"
