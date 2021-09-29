@@ -4,9 +4,8 @@ export default [
     github: "https://github.com/jackbow/lil-hash",
     url: "https://lilhash.com/",
     description: `
-      A simple shareable temporary URL shortener made for when it's easier to
-      just say a short simple URL than figure out how to send it. The links expire after 24 hours
-      so there's always a one word shortening available.
+      An simple URL shortener that produces easily rememberable and speakable shortened URLs.
+      The links expire after 24 hours so there's always a one word shortening available.
     `,
     tech: ["Javascript", "Svelte", "Fastify"],
     img: "lilhash.jpg",

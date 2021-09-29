@@ -25,12 +25,12 @@
         <div class="project-links scrollreveal mt-4">
           {#if project.github}
             <a href={project.github}>
-              <ion-icon class="text-off-gray text-3xl" name="logo-github" />
+              <ion-icon class="text-off-gray text-3xl hover:text-purple-400 transition duration-400" name="logo-github" />
             </a>
           {/if}
           {#if project.url}
             <a href={project.url}>
-              <ion-icon class="text-off-gray text-3xl" name="log-out-outline" />
+              <ion-icon class="text-off-gray text-3xl hover:text-purple-400 transition duration-400" name="open-outline" />
             </a>
           {/if}
         </div>
