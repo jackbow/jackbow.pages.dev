@@ -7,8 +7,8 @@ export default [
       An simple URL shortener that produces easily rememberable and speakable shortened URLs.
       The links expire after 24 hours so there's always a one word shortening available.
     `,
-    tech: ["Javascript", "Svelte", "Fastify"],
-    img: "lilhash.jpg",
+    tech: ["Svelte", "Serverless", "Tailwindcss"],
+    img: "lilhash.webp",
   },
   {
     title: "Arts Engagement Project",
@@ -19,8 +19,8 @@ export default [
       that asked questions about the impacts, precursors, barriers, frequency, and perceptions of co-curricular
       arts engagement in college.
     `,
-    tech: ["R", "NLP", "Machine Learning"],
-    img: "artsengagement.jpg",
+    tech: ["NLP", "Machine Learning", "Data-Viz"],
+    img: "artsengagement.webp",
   },
   {
     title: "Mcity Connected Area Network",
@@ -28,6 +28,6 @@ export default [
       Network visualization with GPS proximity highlighting, and device details.
     `,
     tech: ["Vue", "Flask", "PostgreSQL"],
-    img: "mcity-can.jpg",
+    img: "mcity-can.webp",
   },
 ];

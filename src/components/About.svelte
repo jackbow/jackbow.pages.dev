@@ -21,7 +21,20 @@
     <!-- header blur gets disabled when this following div is removed (very mysterious) -->
     <div class="z-0 scrollreveal">
       <Media border constrained centered>
-        <img src="/media/me.jpg" alt="me" />
+        <img
+          src="/media/me.webp"
+          alt="yours truly"
+        />
+        <!-- <img
+          width="400px"
+          srcset={
+            [1, 0.75, 0.5, 0.25].map(n =>
+              `/media/me-${Math.round(400 * n)}w.webp ${1 / n}x`
+            ).join(", ")
+          }
+          src="/media/me.webp"
+          alt="yours truly"
+        /> -->
       </Media>
     </div>
   </div>

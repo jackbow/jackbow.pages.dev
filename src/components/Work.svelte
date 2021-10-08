@@ -9,15 +9,15 @@
     <div class="project-container justify-items-end grid items-center gap-2 mb-10 mt-2">
       <!-- content div -->
       <div
-        class="z-2 p-5 md:z-auto px-2 2xs:px-4 xs:px-8 sm:px-10 md:px-0"
+        class="z-2 relative p-5 md:z-auto px-2 2xs:px-4 xs:px-8 sm:px-10 md:px-0"
         class:content-right={index % 2 === 0}
         class:content-left={index % 2 === 1}
       >
-        <p class="text-2xl font-semibold scrollreveal">{project.title}</p>
-        <div class="z-2 content-desc relative scrollreveal rounded p-0 md:p-4 mt-4 text-off-gray text-sm md:shadow-xl">
+        <p class="z-2 relative text-2xl font-semibold scrollreveal">{project.title}</p>
+        <div class="z-2 content-desc relative scrollreveal rounded p-0 md:p-4 mt-4 text-gray-300 text-sm md:shadow-xl">
           {project.description}
         </div>
-        <div class="project-tech scrollreveal mt-4 font-mono text-xs text-off-gray">
+        <div class="project-tech scrollreveal mt-4 font-mono text-xs z-2 relative text-off-gray">
           {#each project.tech as tech}
             <p class="inline">{tech}</p>
           {/each}
@@ -41,9 +41,20 @@
           <Media project>
             <img
               class="object-cover object-center h-full w-full"
-              src={'/media/projects/' + project.img}
+              src={`/media/projects/${project.img}`}
               alt="Project screenshot"
             />
+            <!-- <img
+              class="object-cover object-center h-full w-full"
+              srcset={
+                [1, 0.75, 0.5, 0.25].map(n =>
+                  `/media/projects/${project.imgName}-${Math.round(project.imgWidth * n)}w.${project.imgExtension} ${1 / n}x`
+                ).join(", ")
+              }
+              src={`/media/projects/${project.imgName}-${project.imgWidth}w.${project.imgExtension}`}
+              width="680px"
+              alt="Project screenshot"
+            /> -->
           </Media>
         {:else if project.video}
           <Media project>
@@ -101,7 +112,7 @@
   }
   @apply ml-0 mr-6;
 }
-.content-left .project-tech p {
+.content-left .project-tech p:not(:last-child) {
   @apply mr-6;
 }
 .content-right .project-links a ion-icon {
