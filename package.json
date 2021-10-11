@@ -10,17 +10,17 @@
     "resize-images": "node resize-images.js"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.21",
-    "autoprefixer": "^10.3.4",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.27",
+    "autoprefixer": "^10.3.7",
     "husky": "^7.0.2",
-    "postcss": "^8.3.6",
+    "postcss": "^8.3.9",
     "postcss-load-config": "^3.1.0",
     "sharp": "^0.29.1",
     "stylus": "^0.55.0",
-    "svelte": "^3.42.4",
-    "svelte-preprocess": "^4.9.0",
-    "tailwindcss": "^2.2.9",
-    "vite": "^2.5.3"
+    "svelte": "^3.43.1",
+    "svelte-preprocess": "^4.9.8",
+    "tailwindcss": "^2.2.16",
+    "vite": "^2.6.5"
   },
   "dependencies": {
     "scrollreveal": "^4.0.9"
