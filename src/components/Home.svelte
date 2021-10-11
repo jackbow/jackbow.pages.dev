@@ -9,7 +9,7 @@
   transition:fly={{ y: -100, duration: 2000 }}
 >
   <p class="text-purple-400 ml-1 text-sm font-mono">Hi, my name is</p>
-  <p class="big-text mt-3 font-semibold">Jack Bowman</p>
+  <p class="big-text mt-3 font-semibold">Jack Bowman.</p>
   <p class="big-text text-off-gray font-semibold mt-4">
     {tinyBio}
   </p>

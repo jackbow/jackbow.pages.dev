@@ -14,8 +14,8 @@
     line-height: 0.75rem;
   }
   .big-text {
-    font-size: clamp(2rem, 8vw, 5rem);
-    line-height: clamp(2rem, 8vw, 5rem);
+    font-size: clamp(2rem, 7vw, 4.5rem);
+    line-height: clamp(2rem, 7vw, 4.5rem);
   }
   .column-text {
     writing-mode: vertical-rl;
