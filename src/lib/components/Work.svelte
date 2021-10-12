@@ -58,8 +58,10 @@
 							class="object-cover object-center h-full w-full"
 							src={`/media/projects/${project.img}`}
 							alt="Project screenshot"
+							loading="lazy"
 						/>
 						<!-- <img
+							loading="lazy"
               class="object-cover object-center h-full w-full"
               srcset={
                 [1, 0.75, 0.5, 0.25].map(n =>

@@ -24,8 +24,9 @@
 		<!-- header blur gets disabled when this following div is removed (very mysterious) -->
 		<div class="z-0 scrollreveal">
 			<Media border constrained centered>
-				<img src={meImg} alt="yours truly" />
+				<img src={meImg} alt="yours truly" loading="lazy" />
 				<!-- <img
+					loading="lazy"
           width="400px"
           srcset={
             [1, 0.75, 0.5, 0.25].map(n =>
