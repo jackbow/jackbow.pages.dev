@@ -28,32 +28,9 @@
 			gtag('config', 'G-LZPYP1SBXE');
 		</script>
 
-		
-
-		
-
-		<link rel="modulepreload" href="/jackbow/internal/start-e1912e1e.js">
-		<link rel="modulepreload" href="/jackbow/internal/chunks/vendor-3ba5abb5.js">
-		<link rel="stylesheet" href="/jackbow/internal/assets/start-464e9d0a.css">
-
-		<script type="module">
-			import { start } from "/jackbow/internal/start-e1912e1e.js";
-			start({
-				target: document.querySelector("#svelte"),
-				paths: {"base":"/jackbow","assets":""},
-				session: {},
-				host: location.host,
-				route: true,
-				spa: true,
-				trailing_slash: "never",
-				hydrate: null
-			});
-		</script>
+		%svelte.head%
 	</head>
 	<body>
-		<div id="svelte">
-
-			
-		</div>
+		<div id="svelte">%svelte.body%</div>
 	</body>
 </html>
