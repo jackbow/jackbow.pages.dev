@@ -18,9 +18,9 @@
 	>
 		<p class="mb-2">Built by Jack Bowman</p>
 		<div class="flex justify-around w-2/3 text-xs">
-			<Icon name="star-outline" />
+			<Icon strokeWidth={1.5} height={18} width={18} name="star-outline" />
 			<p class="mr-4">{stargazers_count}</p>
-			<Icon name="git-branch-outline" />
+			<Icon strokeWidth={1.5} height={18} width={18} name="git-branch-outline" />
 			<p>{forks_count}</p>
 		</div>
 	</a>

@@ -1,5 +1,6 @@
 <script>
   import Media from './Media.svelte';
+  import Icon from './Icon.svelte';
   import work from '../../content/work.js';
 </script>
 
@@ -17,20 +18,28 @@
         <div class="z-2 content-desc relative scrollreveal rounded p-0 md:p-4 mt-4 text-gray-300 text-sm md:shadow-xl">
           {project.description}
         </div>
-        <div class="project-tech scrollreveal mt-4 font-mono text-xs z-2 relative text-off-gray">
+        <div
+          class="flex space-x-4 scrollreveal mt-4 font-mono text-xs z-2 relative text-off-gray"
+          class:md:justify-start={index % 2 == 1}
+          class:md:justify-end={index % 2 == 0}
+        >
           {#each project.tech as tech}
             <p class="inline">{tech}</p>
           {/each}
         </div>
-        <div class="project-links scrollreveal mt-4">
+        <div
+          class="scrollreveal mt-4 flex space-x-4"
+          class:md:justify-start={index % 2 == 1}
+          class:md:justify-end={index % 2 == 0}
+        >
           {#if project.github}
-            <a href={project.github}>
-              <ion-icon class="text-off-gray text-3xl hover:text-purple-400 transition duration-400" name="logo-github" />
+            <a aria-label="project source code" href={project.github}>
+              <Icon width={32} height={32} classes="text-off-gray text-3xl hover:text-purple-400 transition duration-400 inline" name="logo-github" />
             </a>
           {/if}
           {#if project.url}
-            <a href={project.url}>
-              <ion-icon class="text-off-gray text-3xl hover:text-purple-400 transition duration-400" name="open-outline" />
+            <a aria-label="project website" href={project.url}>
+              <Icon width={32} height={32} classes="text-off-gray text-3xl hover:text-purple-400 transition duration-400 inline" name="external-link" />
             </a>
           {/if}
         </div>
@@ -102,28 +111,5 @@
     background: #322B55;
     color: rgb(168, 178, 209);
   }
-}
-.project-tech {
-  @media (max-width: 428px) {
-    @apply flex flex-wrap;
-  }
-}
-.content-right .project-tech p {
-  @media (min-width: 768px) {
-    @apply mr-0 ml-6;
-  }
-  @apply ml-0 mr-6;
-}
-.content-left .project-tech p:not(:last-child) {
-  @apply mr-6;
-}
-.content-right .project-links a ion-icon {
-  @media (min-width: 768px) {
-    @apply ml-4 mr-0;
-  }
-  @apply mr-4 ml-0;
-}
-.content-left .project-links a ion-icon {
-  @apply mr-4;
 }
 </style>

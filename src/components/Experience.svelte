@@ -27,10 +27,10 @@
     <div>
       {#key job}
         <div class="absolute clamp-margin" transition:blur={{ duration: 1000 }}>
-          <h3 class="scrollreveal">
+          <h1 class="scrollreveal">
             <span>{job.title}</span>
             <a href={job.link}>@ {job.company}</a>
-          </h3>
+          </h1>
           <p class="text-sm text-off-gray font-mono font-light mb-4 mt-1 scrollreveal">
             {job.range}
           </p>
