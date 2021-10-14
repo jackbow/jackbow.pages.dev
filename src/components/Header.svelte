@@ -1,4 +1,7 @@
 <script>
+  import { fly } from 'svelte/transition';
+  import Icon from './Icon.svelte';
+
   const resumeUrl = 'https://drive.google.com/file/d/1WIp7ROSmk95ZSGt-f3s6llsv7N_tEJ4I/view?usp=sharing';
   let navMenuOpen = false;
   const toggleNavMenu = () => {
@@ -71,29 +74,45 @@
   {#if width >= 768}
     <spacer />
   {/if}
-  <a href="#home"> home </a>
+  <a
+    href="#home"
+    in:fly={{ y: -100, duration: 1000, delay: 0 }}
+  >
+    home
+  </a>
   <spacer class="flex-grow" />
   {#if width < 768}
     {#key navMenuOpen}
-      <ion-icon
+      <button
+        aria-label="open menu"
         on:click={() => {
           toggleNavMenu();
         }}
-        name={navMenuOpen ? 'close-outline' : 'menu-outline'}
-        class="text-purple-400 text-5xl z-30 cursor-pointer right-0"
-      />
+      >
+        <Icon
+          name={navMenuOpen ? 'close' : 'menu'}
+          classes="text-purple-400 text-5xl z-30 cursor-pointer right-0"
+        />
+      </button>
     {/key}
   {:else}
     {#each ['About', 'Experience', 'Work', 'Contact'] as section, index}
       <a
         href={`#${section.toLowerCase()}`}
         class="text-xs font-mono py-2 hover:text-purple-400 transition duration-300"
+        in:fly={{ y: -100, duration: 1000, delay: index * 100 }}
       >
         <p class="inline text-purple-400">0{index + 1}.</p>
         <p class="inline text-off-gray ">{section}</p>
       </a>
     {/each}
-    <a href={resumeUrl} class="btn px-4 py-2">Resume</a>
+    <a
+      href={resumeUrl}
+      class="btn px-4 py-2"
+      in:fly={{ y: -100, duration: 1000, delay: 500 }}
+    >
+      Resume
+    </a>
     <spacer />
   {/if}
 </div>

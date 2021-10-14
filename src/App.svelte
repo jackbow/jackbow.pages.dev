@@ -28,10 +28,12 @@
   <a href="https://www.linkedin.com/in/jack-bowman-/">
     <Icon name="logo-linkedin" />
   </a>
-  <Icon name="heart" />
+  <div >
+    <Icon name="heart" />
+  </div>
 </SideInfo>
 <SideInfo side="right">
-  <a class="text-xs font-mono column-text" href="mailto:jackbow@umich.edu">jackbow@umich.edu</a>
+  <a class="text-xs font-mono column-text" href="mailto:jackbow@umich.edu" > jackbow@umich.edu </a>
 </SideInfo>
 <main class="mx-auto h-full max-w-screen-3xl">
   <Home />
