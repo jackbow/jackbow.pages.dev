@@ -11,11 +11,13 @@
 
 	import { onMount } from 'svelte';
 	import ScrollReveal from 'scrollreveal?client';
+	let ready = false;
 	onMount(async () => {
+		ready = true;
 		const delay = 275;
 		ScrollReveal().reveal('.scrollreveal', { delay });
 		ScrollReveal().reveal('.section-header', { delay });
-		// ScrollReveal().reveal('#home', { delay });
+		ScrollReveal().reveal('#home', { delay });
 		ScrollReveal().reveal('footer', { delay });
 	});
 </script>
@@ -34,7 +36,12 @@
 	<a class="text-xs font-mono column-text" href="mailto:jackbow@umich.edu">jackbow@umich.edu</a>
 </SideInfo>
 <main class="mx-auto h-full max-w-screen-3xl">
-	<Home />
+	<!-- ssr animation workaround -->
+	{#if ready}
+		<Home />
+	{:else}
+		<div style="margin-top: 100vh" />
+	{/if}
 	<About />
 	<Experience />
 	<Work />
