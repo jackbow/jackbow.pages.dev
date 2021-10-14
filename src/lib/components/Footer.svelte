@@ -1,6 +1,7 @@
 <script>
 	import Icon from '$lib/components/Icon.svelte';
-	let stargazers_count, forks_count;
+	let stargazers_count = 0,
+		forks_count = 0;
 	fetch('https://api.github.com/repos/jackbow/jackbow.github.io')
 		.then((response) => response.json())
 		.then((json) => {
@@ -17,9 +18,9 @@
 	>
 		<p class="mb-2">Built by Jack Bowman</p>
 		<div class="flex justify-around w-2/3 text-xs">
-			<Icon class="text-sm" name="star-outline" />
+			<Icon name="star-outline" />
 			<p class="mr-4">{stargazers_count}</p>
-			<Icon class="text-sm" name="git-branch-outline" />
+			<Icon name="git-branch-outline" />
 			<p>{forks_count}</p>
 		</div>
 	</a>
