@@ -7,6 +7,7 @@
   import Work from './components/Work.svelte';
   import Contact from './components/Contact.svelte';
   import Footer from './components/Footer.svelte';
+  import Icon from './components/Icon.svelte';
 
   import ScrollReveal from 'scrollreveal';
   import { onMount } from 'svelte';
@@ -22,12 +23,12 @@
 <Header />
 <SideInfo side="left">
   <a href="https://github.com/jackbow">
-    <ion-icon name="logo-github" />
+    <Icon name="logo-github" />
   </a>
   <a href="https://www.linkedin.com/in/jack-bowman-/">
-    <ion-icon name="logo-linkedin" />
+    <Icon name="logo-linkedin" />
   </a>
-  <ion-icon name="heart" />
+  <Icon name="heart" />
 </SideInfo>
 <SideInfo side="right">
   <a class="text-xs font-mono column-text" href="mailto:jackbow@umich.edu">jackbow@umich.edu</a>
