@@ -1,6 +1,6 @@
 <script>
-  import Media from './Media.svelte';
-  import about from '../../content/about.js';
+  import Media from "./Media.svelte";
+  import about from "../../content/about.js";
 </script>
 
 <div id="about" class="mx-auto max-w-3xl py-16 md:py-20">
@@ -21,11 +21,7 @@
     <!-- header blur gets disabled when this following div is removed (very mysterious) -->
     <div class="z-0 scrollreveal">
       <Media border constrained centered>
-        <img
-          loading="lazy"
-          src="/media/me.webp"
-          alt="yours truly"
-        />
+        <img loading="lazy" src="/media/me.webp" alt="yours truly" />
         <!-- <img
           loading="lazy"
           width="400px"

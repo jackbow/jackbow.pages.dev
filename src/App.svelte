@@ -1,22 +1,22 @@
 <script>
-  import Header from './components/Header.svelte';
-  import SideInfo from './components/SideInfo.svelte';
-  import Home from './components/Home.svelte';
-  import About from './components/About.svelte';
-  import Experience from './components/Experience.svelte';
-  import Work from './components/Work.svelte';
-  import Contact from './components/Contact.svelte';
-  import Footer from './components/Footer.svelte';
-  import Icon from './components/Icon.svelte';
+  import Header from "./components/Header.svelte";
+  import SideInfo from "./components/SideInfo.svelte";
+  import Home from "./components/Home.svelte";
+  import About from "./components/About.svelte";
+  import Experience from "./components/Experience.svelte";
+  import Work from "./components/Work.svelte";
+  import Contact from "./components/Contact.svelte";
+  import Footer from "./components/Footer.svelte";
+  import Icon from "./components/Icon.svelte";
 
-  import ScrollReveal from 'scrollreveal';
-  import { onMount } from 'svelte';
+  import ScrollReveal from "scrollreveal";
+  import { onMount } from "svelte";
   onMount(async () => {
     const delay = 275;
-    ScrollReveal().reveal('.scrollreveal', { delay });
-    ScrollReveal().reveal('.section-header', { delay });
-    ScrollReveal().reveal('#home', { delay });
-    ScrollReveal().reveal('footer', { delay });
+    ScrollReveal().reveal(".scrollreveal", { delay });
+    ScrollReveal().reveal(".section-header", { delay });
+    ScrollReveal().reveal("#home", { delay });
+    ScrollReveal().reveal("footer", { delay });
   });
 </script>
 
@@ -28,12 +28,12 @@
   <a href="https://www.linkedin.com/in/jack-bowman-/">
     <Icon name="logo-linkedin" />
   </a>
-  <div >
+  <div>
     <Icon name="heart" />
   </div>
 </SideInfo>
 <SideInfo side="right">
-  <a class="text-xs font-mono column-text" href="mailto:jackbow@umich.edu" > jackbow@umich.edu </a>
+  <a class="text-xs font-mono column-text" href="mailto:jackbow@umich.edu"> jackbow@umich.edu </a>
 </SideInfo>
 <main class="mx-auto h-full max-w-screen-3xl">
   <Home />

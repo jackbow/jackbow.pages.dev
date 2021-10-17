@@ -1,5 +1,5 @@
 <script>
-  import { contactBlurb } from '../../content/contact.js';
+  import { contactBlurb } from "../../content/contact.js";
 </script>
 
 <div id="contact" class="w-full flex flex-col items-center xs:pt-10 sm:pt-18 md:pt-24 lg:pt-28">

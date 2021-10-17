@@ -1,7 +1,7 @@
 <script>
-  import Media from './Media.svelte';
-  import Icon from './Icon.svelte';
-  import work from '../../content/work.js';
+  import Media from "./Media.svelte";
+  import Icon from "./Icon.svelte";
+  import work from "../../content/work.js";
 </script>
 
 <div id="work" class="mt-48 mx-auto max-w-screen-lg py-96 2xs:py-48 xs:py-28 sm:py-24 md:py-20 lg:py-14">
@@ -34,12 +34,22 @@
         >
           {#if project.github}
             <a aria-label="project source code" href={project.github}>
-              <Icon width={32} height={32} classes="text-off-gray text-3xl hover:text-purple-400 transition duration-400 inline" name="logo-github" />
+              <Icon
+                width={32}
+                height={32}
+                classes="text-off-gray text-3xl hover:text-purple-400 transition duration-400 inline"
+                name="logo-github"
+              />
             </a>
           {/if}
           {#if project.url}
             <a aria-label="project website" href={project.url}>
-              <Icon width={32} height={32} classes="text-off-gray text-3xl hover:text-purple-400 transition duration-400 inline" name="external-link" />
+              <Icon
+                width={32}
+                height={32}
+                classes="text-off-gray text-3xl hover:text-purple-400 transition duration-400 inline"
+                name="external-link"
+              />
             </a>
           {/if}
         </div>
@@ -69,7 +79,7 @@
           </Media>
         {:else if project.video}
           <Media project>
-            <video autoplay muted loop src={'/media/projects/' + project.video} type="video/webm" />
+            <video autoplay muted loop src={"/media/projects/" + project.video} type="video/webm" />
           </Media>
         {/if}
       </div>

@@ -1,6 +1,6 @@
 <script>
-  import { blur } from 'svelte/transition';
-  import jobs from '../../content/jobs.js';
+  import { blur } from "svelte/transition";
+  import jobs from "../../content/jobs.js";
   let tab = 0;
   $: job = jobs[tab];
   const setTab = (i) => {

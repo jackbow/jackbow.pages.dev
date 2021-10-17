@@ -1,12 +1,12 @@
 <script>
-  import { fly } from 'svelte/transition';
-  import Icon from './Icon.svelte';
+  import { fly } from "svelte/transition";
+  import Icon from "./Icon.svelte";
 
-  const resumeUrl = 'https://drive.google.com/file/d/1WIp7ROSmk95ZSGt-f3s6llsv7N_tEJ4I/view?usp=sharing';
+  const resumeUrl = "https://drive.google.com/file/d/1WIp7ROSmk95ZSGt-f3s6llsv7N_tEJ4I/view?usp=sharing";
   let navMenuOpen = false;
   const toggleNavMenu = () => {
     navMenuOpen = !navMenuOpen;
-    window.document.body.classList.toggle('noscroll');
+    window.document.body.classList.toggle("noscroll");
   };
 
   export let offset = 50;
@@ -21,17 +21,17 @@
     const dy = lastY - y;
     lastY = y;
     if (y < offset) {
-      return 'show';
+      return "show";
     } else if (Math.abs(dy) <= tolerance) {
       return showHeader;
     } else if (dy < 0) {
-      return 'hide';
+      return "hide";
     } else {
-      return 'show';
+      return "show";
     }
   };
 
-  $: showHeader = updateClass(y) === 'show';
+  $: showHeader = updateClass(y) === "show";
 </script>
 
 <svelte:window bind:scrollY={y} bind:innerWidth={width} />
@@ -48,7 +48,7 @@
   class="fixed transition-all duration-300 top-0 w-2/3 h-full z-20 flex flex-col items-center justify-center"
   class:open={navMenuOpen}
 >
-  {#each ['About', 'Experience', 'Work', 'Contact'] as section, index}
+  {#each ["About", "Experience", "Work", "Contact"] as section, index}
     <div class="font-mono flex-col flex items-center text-md">
       <p class="inline text-purple-400">0{index + 1}.</p>
       <a
@@ -74,12 +74,7 @@
   {#if width >= 768}
     <spacer />
   {/if}
-  <a
-    href="#home"
-    in:fly={{ y: -100, duration: 1000, delay: 0 }}
-  >
-    home
-  </a>
+  <a href="#home" in:fly={{ y: -100, duration: 1000, delay: 0 }}> home </a>
   <spacer class="flex-grow" />
   {#if width < 768}
     {#key navMenuOpen}
@@ -89,14 +84,11 @@
           toggleNavMenu();
         }}
       >
-        <Icon
-          name={navMenuOpen ? 'close' : 'menu'}
-          classes="text-purple-400 text-5xl z-30 cursor-pointer right-0"
-        />
+        <Icon name={navMenuOpen ? "close" : "menu"} classes="text-purple-400 text-5xl z-30 cursor-pointer right-0" />
       </button>
     {/key}
   {:else}
-    {#each ['About', 'Experience', 'Work', 'Contact'] as section, index}
+    {#each ["About", "Experience", "Work", "Contact"] as section, index}
       <a
         href={`#${section.toLowerCase()}`}
         class="text-xs font-mono py-2 hover:text-purple-400 transition duration-300"
@@ -106,13 +98,7 @@
         <p class="inline text-off-gray ">{section}</p>
       </a>
     {/each}
-    <a
-      href={resumeUrl}
-      class="btn px-4 py-2"
-      in:fly={{ y: -100, duration: 1000, delay: 500 }}
-    >
-      Resume
-    </a>
+    <a href={resumeUrl} class="btn px-4 py-2" in:fly={{ y: -100, duration: 1000, delay: 500 }}> Resume </a>
     <spacer />
   {/if}
 </div>
