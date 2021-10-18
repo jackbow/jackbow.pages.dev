@@ -1,6 +1,7 @@
-# jackbow.github.io
+# [jackbow.github.io](https://jackbow.github.io/)
 
-My resume website.
+My resume website.<br>
+Static site built with Svelte, TailwindCSS, and Vite.
 
 ![](https://i.imgur.com/ESIKzzl.png)
 
