@@ -30,4 +30,13 @@ export default [
     tech: ["Vue", "Flask", "PostgreSQL"],
     img: "mcity-can.webp",
   },
+  {
+    title: "Toggle Rebar Configurator",
+    description: `
+      Interactive 3D rebar cage configurator for designing and generating rebar geometry
+      which once submitted is sent to a facility for robotic assembly and welding.
+    `,
+    tech: ["gRPC", "Go", "Typescript", "glTF"],
+    img: "toggle-configurator.webp",
+  },
 ];
