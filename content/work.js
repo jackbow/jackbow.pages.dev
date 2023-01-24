@@ -5,7 +5,7 @@ export default [
     url: "https://lilhash.com/",
     description: `
       A simple URL shortener that produces easily rememberable and speakable shortened URLs.
-      The links expire after 24 hours so there's always a one word shortening available.
+      The links expire after 24 hours so there's always a one word shortening available. Receives approximately 20,000 visits each month.
     `,
     tech: ["Svelte", "Serverless", "Tailwindcss"],
     img: "lilhash.webp",
