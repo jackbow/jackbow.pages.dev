@@ -15,7 +15,7 @@ export default [
     title: "Full-Stack Engineer",
     company: "Mcity",
     location: "Ann Arbor, MI",
-    range: "March 2020 - Present",
+    range: "March 2020 - September 2021",
     link: "https://www.mcity.umich.edu/",
     bullets: [
       `Developed research tools for the world’s largest connected & autonomous vehicle test environment in a small team.Used by Ford, GM, Toyota, Subaru, and BMW autonomous vehicle engineers among others.`,
