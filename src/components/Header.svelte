@@ -2,7 +2,7 @@
   import { fly } from "svelte/transition";
   import Icon from "./Icon.svelte";
 
-  const resumeUrl = "https://drive.google.com/file/d/1WIp7ROSmk95ZSGt-f3s6llsv7N_tEJ4I/view?usp=sharing";
+  const resumeUrl = "https://drive.google.com/file/d/1KqO_eInQj7wKK80BUsTAvhbrTxjWkjwm/view?usp=sharing";
   let navMenuOpen = false;
   const toggleNavMenu = () => {
     navMenuOpen = !navMenuOpen;
