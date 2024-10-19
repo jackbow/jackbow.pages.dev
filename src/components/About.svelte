@@ -21,7 +21,7 @@
     <!-- header blur gets disabled when this following div is removed (very mysterious) -->
     <div class="z-0 scrollreveal">
       <Media border constrained centered>
-        <img loading="lazy" src="/media/me.webp" alt="yours truly" />
+        <enhanced:img loading="lazy" src="/content/media/me.webp" alt="yours truly" />
         <!-- <img
           loading="lazy"
           width="400px"

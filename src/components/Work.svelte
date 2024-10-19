@@ -2,11 +2,20 @@
   import Media from "./Media.svelte";
   import Icon from "./Icon.svelte";
   import work from "../../content/work.js";
+  const workImages = import.meta.glob("../../content/media/projects/*.webp", {
+    eager: true,
+    query: "?url",
+    import: "default",
+  });
+  const workWithImages = work.map((project) => ({
+    ...project,
+    img: workImages[`../../content/media/projects/${project.img}`],
+  }));
 </script>
 
 <div id="work" class="mt-48 mx-auto max-w-screen-lg py-96 2xs:py-48 xs:py-28 sm:py-24 md:py-20 lg:py-14">
   <h1 class="section-header">Some Things I’ve Built</h1>
-  {#each work as project, index (index)}
+  {#each workWithImages as project, index (index)}
     <div class="project-container justify-items-end grid items-center gap-2 mb-10 mt-2">
       <!-- content div -->
       <div
@@ -56,32 +65,20 @@
       </div>
       <!-- media div -->
       <div class="z-1 scrollreveal h-full" class:picture-right={index % 2 === 1} class:picture-left={index % 2 === 0}>
-        {#if project.img}
-          <Media project>
-            <img
+        <Media project>
+          {#if project.img}
+            <enhanced:img
               loading="lazy"
               class="object-cover object-center h-full w-full"
-              src={`/media/projects/${project.img}`}
+              src={project.img || ""}
               alt="Project screenshot"
             />
-            <!-- <img
-              loading="lazy"
-              class="object-cover object-center h-full w-full"
-              srcset={
-                [1, 0.75, 0.5, 0.25].map(n =>
-                  `/media/projects/${project.imgName}-${Math.round(project.imgWidth * n)}w.${project.imgExtension} ${1 / n}x`
-                ).join(", ")
-              }
-              src={`/media/projects/${project.imgName}-${project.imgWidth}w.${project.imgExtension}`}
-              width="680px"
-              alt="Project screenshot"
-            /> -->
-          </Media>
-        {:else if project.video}
-          <Media project>
-            <video autoplay muted loop src={"/media/projects/" + project.video} type="video/webm" />
-          </Media>
-        {/if}
+            <!-- {:else if project.video}
+            <Media project>
+              <video autoplay muted loop src={`/media/projects/${project.video}`} />
+            </Media> -->
+          {/if}
+        </Media>
       </div>
     </div>
   {/each}
