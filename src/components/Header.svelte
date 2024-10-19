@@ -35,7 +35,7 @@
 </script>
 
 <svelte:window bind:scrollY={y} bind:innerWidth={width} />
-<div
+<button
   id="blur-filter"
   class="z-10 h-full w-1/3 fixed transition-all duration-300"
   class:open={navMenuOpen}
@@ -95,7 +95,7 @@
         in:fly={{ y: -100, duration: 1000, delay: index * 100 }}
       >
         <p class="inline text-purple-400">0{index + 1}.</p>
-        <p class="inline text-off-gray ">{section}</p>
+        <p class="inline text-off-gray">{section}</p>
       </a>
     {/each}
     <a href={resumeUrl} class="btn px-4 py-2" in:fly={{ y: -100, duration: 1000, delay: 500 }}> Resume </a>

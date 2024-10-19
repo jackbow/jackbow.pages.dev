@@ -1,6 +1,7 @@
 {
   "name": "jackbow.github.io",
   "version": "1.0.1",
+  "type": "module",
   "engines": {
     "node": "20",
     "npm": ">=10"
@@ -9,30 +10,30 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "prepare": "husky install",
+    "prepare": "husky",
     "resize-images": "node resize-images.js",
     "commitlint": "commitlint",
-    "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
-    "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. . && eslint --fix --ignore-path .gitignore ."
+    "lint": "prettier --check . && eslint .",
+    "format": "prettier --write . && eslint --fix ."
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.0.3",
-    "@commitlint/config-conventional": "^17.0.3",
-    "@sveltejs/vite-plugin-svelte": "^1.0.1",
-    "autoprefixer": "^10.4.7",
-    "eslint": "^8.20.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-svelte3": "^4.0.0",
-    "husky": "^8.0.1",
-    "postcss": "^8.4.14",
-    "postcss-load-config": "^4.0.1",
-    "prettier": "^2.7.1",
-    "prettier-plugin-svelte": "^2.7.0",
-    "sharp": "^0.30.7",
-    "svelte": "^3.49.0",
-    "svelte-preprocess": "^4.10.7",
-    "tailwindcss": "^3.1.6",
-    "vite": "^3.0.3"
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@sveltejs/vite-plugin-svelte": "^3.1.2",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.13.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-svelte": "^2.45.1",
+    "husky": "^9.1.6",
+    "postcss": "^8.4.47",
+    "postcss-load-config": "^6.0.1",
+    "prettier": "^3.3.3",
+    "prettier-plugin-svelte": "^3.2.7",
+    "sharp": "^0.33.5",
+    "svelte": "^4.2.19",
+    "svelte-preprocess": "^6.0.3",
+    "tailwindcss": "^3.4.14",
+    "vite": "^5.4.9"
   },
   "dependencies": {
     "scrollreveal": "^4.0.9"

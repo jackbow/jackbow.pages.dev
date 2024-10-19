@@ -5,7 +5,7 @@ const images = ["./public/media/me.webp"].concat(
   fs
     .readdirSync(path)
     .filter((img) => img.endsWith("webp") && !img.endsWith("w.webp"))
-    .map((img) => path + img)
+    .map((img) => path + img),
 );
 for (let imageName of images) {
   let sharp_image = sharp(imageName);

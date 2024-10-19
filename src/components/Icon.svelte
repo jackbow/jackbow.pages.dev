@@ -8,5 +8,6 @@
 </script>
 
 <span class={classes}>
+  <!-- eslint-disable-next-line -->
   {@html icons[name](width, height, strokeWidth)}
 </span>

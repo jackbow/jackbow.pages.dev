@@ -11,9 +11,9 @@
 <div id="experience" class="mx-auto max-w-xl py-16 md:py-20">
   <h1 class="section-header mb-1">Where I've Worked</h1>
   <div class="sm:flex">
-    <div class="flex overflow-y-auto w-max max-w-full flex-row sm:flex-col mb-6 mr-4 ">
+    <div class="flex overflow-y-auto w-max max-w-full flex-row sm:flex-col mb-6 mr-4">
       {#each jobs as job, index (index)}
-        <p
+        <button
           class:active={tab === index}
           class="tab scrollreveal text-center sm:text-left text-xs px-4 py-3 font-mono cursor-pointer transition-all duration-300 ease-in-out"
           on:click={() => {
@@ -21,7 +21,7 @@
           }}
         >
           {job.company}
-        </p>
+        </button>
       {/each}
     </div>
     <div>

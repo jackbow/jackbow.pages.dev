@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   extends: ["@commitlint/config-conventional"],
   ignores: [(message) => /^build\(deps\): bump/.test(message)],
   rules: {
