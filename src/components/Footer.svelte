@@ -1,7 +1,7 @@
 <script>
   import Icon from "./Icon.svelte";
-  let stargazers_count = 0,
-    forks_count = 0;
+  let stargazers_count = $state(0),
+    forks_count = $state(0);
   fetch("https://api.github.com/repos/jackbow/jackbow.github.io")
     .then((response) => response.json())
     .then((json) => {
@@ -27,5 +27,4 @@
 </footer>
 
 <style lang="stylus">
-
 </style>

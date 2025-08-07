@@ -1,9 +1,9 @@
 <script>
-  export let name,
+  let { name,
     width = 24,
     height = 24,
     strokeWidth = 2,
-    classes = "";
+    classes = "" } = $props();
   import icons from "../../content/icons.js";
 </script>
 

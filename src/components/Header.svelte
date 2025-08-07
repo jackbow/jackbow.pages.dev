@@ -3,19 +3,17 @@
   import Icon from "./Icon.svelte";
 
   const resumeUrl = "https://drive.google.com/file/d/1KqO_eInQj7wKK80BUsTAvhbrTxjWkjwm/view?usp=sharing";
-  let navMenuOpen = false;
+  let navMenuOpen = $state(false);
   const toggleNavMenu = () => {
     navMenuOpen = !navMenuOpen;
     window.document.body.classList.toggle("noscroll");
   };
 
-  export let offset = 50;
-  export let tolerance = 0;
+  let { offset = 50, tolerance = 0 } = $props();
 
-  let width;
-  let showHeader = true;
-  let y = 0;
-  let lastY = 0;
+  let width = $state();
+  let y = $state(0);
+  let lastY = $state(0);
 
   const updateClass = (y) => {
     const dy = lastY - y;
@@ -31,18 +29,19 @@
     }
   };
 
-  $: showHeader = updateClass(y) === "show";
+  const showHeader = $derived(updateClass(y) === "show");
 </script>
 
 <svelte:window bind:scrollY={y} bind:innerWidth={width} />
 <button
   id="blur-filter"
   class="z-10 h-full w-1/3 fixed transition-all duration-300"
+  aria-label="open menu"
   class:open={navMenuOpen}
-  on:click={() => {
+  onclick={() => {
     toggleNavMenu();
   }}
-/>
+></button>
 <div
   id="nav-menu"
   class="fixed transition-all duration-300 top-0 w-2/3 h-full z-20 flex flex-col items-center justify-center"
@@ -52,7 +51,7 @@
     <div class="font-mono flex-col flex items-center text-md">
       <p class="inline text-purple-400">0{index + 1}.</p>
       <a
-        on:click={() => {
+        onclick={() => {
           toggleNavMenu();
         }}
         href={`#${section.toLowerCase()}`}
@@ -72,15 +71,15 @@
   class:nav-closed={!navMenuOpen}
 >
   {#if width >= 768}
-    <spacer />
+    <spacer></spacer>
   {/if}
   <a href="#home" in:fly={{ y: -100, duration: 1000, delay: 0 }}> home </a>
-  <spacer class="flex-grow" />
+  <spacer class="flex-grow"></spacer>
   {#if width < 768}
     {#key navMenuOpen}
       <button
         aria-label="open menu"
-        on:click={() => {
+        onclick={() => {
           toggleNavMenu();
         }}
       >
@@ -99,7 +98,7 @@
       </a>
     {/each}
     <a href={resumeUrl} class="btn px-4 py-2" in:fly={{ y: -100, duration: 1000, delay: 500 }}> Resume </a>
-    <spacer />
+    <spacer></spacer>
   {/if}
 </div>
 

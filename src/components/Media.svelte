@@ -1,8 +1,11 @@
 <script>
-  export let border = false;
-  export let constrained = false;
-  export let project = false;
-  export let centered = false;
+  let {
+    border = false,
+    constrained = false,
+    project = false,
+    centered = false,
+    children,
+  } = $props();
 </script>
 
 <div
@@ -12,7 +15,7 @@
   class:media-wrapper-border={border}
   class:media-wrapper-constrained={constrained}
 >
-  <slot />
+  {@render children()}
 </div>
 
 <style lang="stylus">

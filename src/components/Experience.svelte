@@ -1,8 +1,8 @@
 <script>
   import { blur } from "svelte/transition";
   import jobs from "../../content/jobs.js";
-  let tab = 0;
-  $: job = jobs[tab];
+  let tab = $state(0);
+  const job = $derived(jobs[tab]);
   const setTab = (i) => {
     tab = i;
   };
@@ -16,7 +16,7 @@
         <button
           class:active={tab === index}
           class="tab scrollreveal text-center sm:text-left text-xs px-4 py-3 font-mono cursor-pointer transition-all duration-300 ease-in-out"
-          on:click={() => {
+          onclick={() => {
             setTab(index);
           }}
         >

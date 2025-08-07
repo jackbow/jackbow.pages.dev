@@ -1,5 +1,5 @@
 <script>
-  export let side;
+  let { side, children } = $props();
   import { fade } from "svelte/transition";
 </script>
 
@@ -10,8 +10,8 @@
   in:fade={{ duration: 1000, delay: 1400 }}
 >
   <div class="flex flex-col hover-children">
-    <slot />
-    <div class="w-px h-10 bg-off-gray self-center" />
+    {@render children()}
+    <div class="w-px h-10 bg-off-gray self-center"></div>
   </div>
 </div>
 
