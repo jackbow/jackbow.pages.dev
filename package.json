@@ -3,8 +3,8 @@
   "version": "1.0.1",
   "type": "module",
   "engines": {
-    "node": "20",
-    "npm": ">=10"
+    "node": "24",
+    "npm": ">=11"
   },
   "scripts": {
     "dev": "vite",
@@ -38,5 +38,8 @@
   },
   "dependencies": {
     "scrollreveal": "^4.0.9"
+  },
+  "volta": {
+    "node": "24.4.1"
   }
 }
