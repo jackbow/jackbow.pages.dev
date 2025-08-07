@@ -27,7 +27,7 @@ export default [
       `Built a proximity-aware network visualization tool for autonomous vehicle testing, achieving 6300% faster device connectivity analysis through efficient data structures and real-time event handling.`,
       `Modernized legacy systems by refactoring monolithic codebases into modular components, improving maintainability.`,
       `Implemented unit test and integration test suites hooked into CI/CD pipelines.`,
-      `Worked with Javascript, Vue, Python, Flask, Docker, PostgreSQL, Redis, Linux, and more.`,
+      `Worked with Typescript, Vue, Python, Flask, Docker, PostgreSQL, Redis, Linux, and more.`,
     ],
   },
   {
