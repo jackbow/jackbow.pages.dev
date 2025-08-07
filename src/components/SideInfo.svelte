@@ -11,7 +11,7 @@
 >
   <div class="flex flex-col hover-children">
     <slot />
-    <div class={`w-px h-10 bg-off-gray self-center`} />
+    <div class="w-px h-10 bg-off-gray self-center" />
   </div>
 </div>
 

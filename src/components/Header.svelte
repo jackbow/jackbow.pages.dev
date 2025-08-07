@@ -48,7 +48,7 @@
   class="fixed transition-all duration-300 top-0 w-2/3 h-full z-20 flex flex-col items-center justify-center"
   class:open={navMenuOpen}
 >
-  {#each ["About", "Experience", "Work", "Contact"] as section, index}
+  {#each ["About", "Experience", "Work", "Contact"] as section, index (section)}
     <div class="font-mono flex-col flex items-center text-md">
       <p class="inline text-purple-400">0{index + 1}.</p>
       <a
@@ -88,7 +88,7 @@
       </button>
     {/key}
   {:else}
-    {#each ["About", "Experience", "Work", "Contact"] as section, index}
+    {#each ["About", "Experience", "Work", "Contact"] as section, index (section)}
       <a
         href={`#${section.toLowerCase()}`}
         class="text-xs font-mono py-2 hover:text-purple-400 transition duration-300"
