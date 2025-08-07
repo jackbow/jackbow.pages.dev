@@ -13,7 +13,7 @@
   }));
 </script>
 
-<div id="work" class="mt-48 mx-auto max-w-screen-lg py-96 2xs:py-48 xs:py-28 sm:py-24 md:py-20 lg:py-14">
+<div id="work" class="mx-auto max-w-screen-lg py-96 2xs:py-48 xs:py-28 sm:py-24 md:py-20 lg:py-14">
   <h1 class="section-header">Some Things I’ve Built</h1>
   {#each workWithImages as project, index (project.title)}
     <div class="project-container justify-items-end grid items-center gap-2 mb-10 mt-2">

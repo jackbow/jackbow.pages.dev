@@ -1,8 +1,8 @@
 <script>
   import { fly } from "svelte/transition";
   import Icon from "./Icon.svelte";
+  import { resumeUrl } from "../../content/resume.js";
 
-  const resumeUrl = "https://drive.google.com/file/d/1KqO_eInQj7wKK80BUsTAvhbrTxjWkjwm/view?usp=sharing";
   let navMenuOpen = $state(false);
   const toggleNavMenu = () => {
     navMenuOpen = !navMenuOpen;

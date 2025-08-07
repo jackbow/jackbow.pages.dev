@@ -1,5 +1,6 @@
 <script>
   import { contactBlurb } from "../../content/contact.js";
+  import { resumeUrl } from "../../content/resume.js";
 </script>
 
 <div id="contact" class="w-full flex flex-col items-center xs:pt-10 sm:pt-18 md:pt-24 lg:pt-28">
@@ -8,7 +9,10 @@
   <p class="scrollreveal w-2/3 lg:w-1/3 mt-5 text-center text-md text-off-gray">
     {contactBlurb}
   </p>
-  <a href="mailto:jackbow@umich.edu" class="scrollreveal btn mt-8 px-6 py-4"> Say hello </a>
+  <div class="mt-8 space-x-4 scrollreveal">
+  <a href="mailto:jackbow@umich.edu" class="btn px-6 py-4"> Say Hello </a>
+  <a href={resumeUrl} class="btn px-6 py-4"> View Resume </a>
+  </div>
 </div>
 
 <style lang="stylus">

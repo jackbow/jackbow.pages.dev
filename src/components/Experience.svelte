@@ -8,7 +8,7 @@
   };
 </script>
 
-<div id="experience" class="mx-auto max-w-xl py-16 md:py-20">
+<div id="experience" class="mx-auto max-w-xl py-16 md:py-20 mb-[28rem] md:mb-96 lg:mb-64">
   <h1 class="section-header mb-1">Where I've Worked</h1>
   <div class="sm:flex">
     <div class="flex overflow-y-auto w-max max-w-full flex-row sm:flex-col mb-6 mr-4">
