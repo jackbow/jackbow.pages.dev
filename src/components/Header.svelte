@@ -9,27 +9,22 @@
     window.document.body.classList.toggle("noscroll");
   };
 
-  let { offset = 50, tolerance = 0 } = $props();
+  let { offset = 50 } = $props();
 
   let width = $state();
   let y = $state(0);
-  let lastY = $state(0);
-
-  const updateClass = (y) => {
-    const dy = lastY - y;
+  let lastY = 0
+  let showHeader = $derived.by(()=>{
+    const dY = lastY - y
     lastY = y;
     if (y < offset) {
-      return "show";
-    } else if (Math.abs(dy) <= tolerance) {
-      return showHeader;
-    } else if (dy < 0) {
-      return "hide";
-    } else {
-      return "show";
+      return true;
+    } else if (dY > 0) {
+      return true; // Scrolling up
+    } else if (dY < 0) {
+      return false; // Scrolling down
     }
-  };
-
-  const showHeader = $derived(updateClass(y) === "show");
+  });
 </script>
 
 <svelte:window bind:scrollY={y} bind:innerWidth={width} />
