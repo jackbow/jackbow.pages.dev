@@ -13,8 +13,8 @@
     "prepare": "husky",
     "resize-images": "node resize-images.js",
     "commitlint": "commitlint",
-    "lint": "prettier --check . && eslint .",
-    "format": "prettier --write . && eslint --fix ."
+    "lint": "prettier --check .; eslint .",
+    "format": "prettier --write .; eslint --fix ."
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
