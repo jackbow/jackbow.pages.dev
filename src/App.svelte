@@ -8,6 +8,7 @@
   import Contact from "./components/Contact.svelte";
   import Footer from "./components/Footer.svelte";
   import Icon from "./components/Icon.svelte";
+  import {resumeUrl} from "../content/resume.js";
 
   import ScrollReveal from "scrollreveal";
   import { onMount } from "svelte";
@@ -18,6 +19,7 @@
     ScrollReveal().reveal("#home", { delay });
     ScrollReveal().reveal("footer", { delay });
   });
+  let heartClicked = $state(false);
 </script>
 
 <Header />
@@ -28,9 +30,12 @@
   <a href="https://www.linkedin.com/in/jack-bowman-/">
     <Icon name="logo-linkedin" />
   </a>
-  <div>
-    <Icon name="heart" />
-  </div>
+  <a href={resumeUrl}>
+    <Icon name="resume" />
+  </a>
+  <button onclick={()=>heartClicked=!heartClicked}>
+    <Icon name={heartClicked ? "heart-filled" : "heart"} />
+  </button>
 </SideInfo>
 <SideInfo side="right">
   <a class="text-xs font-mono column-text" href="mailto:jackbow@umich.edu"> jackbow@umich.edu </a>
