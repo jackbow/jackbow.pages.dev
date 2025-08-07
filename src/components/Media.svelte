@@ -1,11 +1,5 @@
 <script>
-  let {
-    border = false,
-    constrained = false,
-    project = false,
-    centered = false,
-    children,
-  } = $props();
+  let { border = false, constrained = false, project = false, centered = false, children } = $props();
 </script>
 
 <div

@@ -1,9 +1,5 @@
 <script>
-  let { name,
-    width = 24,
-    height = 24,
-    strokeWidth = 2,
-    classes = "" } = $props();
+  let { name, width = 24, height = 24, strokeWidth = 2, classes = "" } = $props();
   import icons from "../../content/icons.js";
 </script>
 
